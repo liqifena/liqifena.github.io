@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>somfun</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-10-27T13:04:37.757Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>lee</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第一篇文章</title>
+    <link href="http://yoursite.com/2018/10/27/hello-world/"/>
+    <id>http://yoursite.com/2018/10/27/hello-world/</id>
+    <published>2018-10-27T06:21:32.057Z</published>
+    <updated>2018-10-27T13:04:37.757Z</updated>
+    
+    <content type="html"><![CDATA[<p>歌手:林志炫</p><p><strong>*</strong>离人<strong>*</strong><br>林志炫<br>词: 厉曼婷 曲: 何家文</p><p>银色小船摇摇晃晃弯弯<br>悬在绒绒的天上<br>你的心事三三俩俩蓝蓝<br>停在我幽幽心上<br>你说情到深处人怎能不孤独<br>爱到浓时就牵肠挂肚<br>我的行李孤孤单单散散惹惆怅<br>离人放逐到边界<br>彷佛走入第五个季节<br>昼夜乱了和谐 潮泛任性涨退<br>字典里没春天<br>离人挥霍著眼泪<br>回避还在眼前的离别<br>你不敢想明天<br>我不肯说再见<br>有人说一次告别<br>天上就会有颗星又熄灭<br>(music)<br>银色小船摇摇晃晃弯弯<br>悬在绒绒的天上<br>你的心事三三俩俩蓝蓝<br>停在我幽幽心上<br>你说情到深处人怎能不孤独<br>爱到浓时就牵肠挂肚<br>我的行李孤孤单单散散惹惆怅<br>离人放逐到边界<br>彷佛走入第五个季节<br>昼夜乱了和谐 潮泛任性涨退<br>字典里没春天<br>离人挥霍著眼泪<br>回避还在眼前的离别<br>你不敢想明天<br>我不肯说再见<br>有人说一次告别<br>天上就会有颗星又熄灭</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;歌手:林志炫&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;*&lt;/strong&gt;离人&lt;strong&gt;*&lt;/strong&gt;&lt;br&gt;林志炫&lt;br&gt;词: 厉曼婷 曲: 何家文&lt;/p&gt;
+&lt;p&gt;银色小船摇摇晃晃弯弯&lt;br&gt;悬在绒绒的天上&lt;br&gt;你的心事三三俩俩蓝蓝&lt;br&gt;停在我幽幽心上&lt;br&gt;你说情
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
