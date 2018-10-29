@@ -22,7 +22,7 @@ photo ={
             li += '<div class="card" style="width:330px">' +
                     '<div class="ImageInCard" style="height:'+ 330 * imageY / imageX + 'px">' +
                       '<a data-fancybox="gallery" href="https://github.com/liqifena/BlogPhotos/blob/master/Images/' + imgNameWithPattern + '?raw=true" data-caption="' + imgName + '">' +
-                        '<img src="https://github.com/liqifena/BlogPhotos/blob/master/Images' + imgNameWithPattern + '?raw=true"/>' +
+                        '<img src="https://github.com/liqifena/BlogPhotos/blob/master/Images/' + imgNameWithPattern + '?raw=true"/>' +
                       '</a>' +
                     '</div>' +
                     // '<div class="TextInCard">' + imgName + '</div>' +
