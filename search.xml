@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[箭头函数与普通函数的区别]]></title>
+    <url>%2F2018%2F10%2F30%2F%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E4%B8%8E%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"><![CDATA[箭头函数： 123let fun = () =&gt; &#123; console.log(&apos;balabala&apos;);&#125; 普通函数： 123function fun() &#123; console.log(&apos;balabalabalala&apos;);&#125; 箭头函数相当于匿名函数，并简化了函数定义。箭头函数有两种格式，一种只包含一个表达式，连{…} 和return都省略掉了。还有一种可以包含多条语句，这时候就不能省略了。 箭头函数是匿名函数，不能作为构造函数，不能使用newFunConstructor 12345let FunConstructor = () =&gt; &#123; console.log(&apos;hahaha&apos;);&#125;let fc = new FunConstructor(); 箭头函数不绑定arguments，取而代之用rest参数…解决123456789101112131415function A(a) &#123; console.log(arguments);&#125;A(1,2,3,4,5,6);// [1 ,2, 3, 4, 5, 6, callee: f,Symbol(Symbol.iterator): f]let B= (b) =&gt; &#123; console.log(arguments);&#125;B(1,2,3,4); // Uncaught ReferenceError: arguments is not definedlet C = (...c) =&gt; &#123; console.log(c);&#125;C(1,2,3,4); // [1,2,3,4] 箭头函数不绑定this，会捕获其所在的上下文的this值，作为自己的this值123456789101112var obj = &#123; a: 10, b: () =&gt; &#123;console.log(this.a);console.log(this);&#125;,c: function () &#123; console.log(this.a); console.log(this);&#125;obj.b();obj.c(); 12345678910111213var obj = &#123; a: 10, b: function()&#123; console.log(this.a); //10 &#125;, c: function() &#123; return ()=&gt;&#123; console.log(this.a); //10 &#125; &#125;&#125;obj.b(); obj.c()(); 箭头函数通过 call() 或 apply() 方法调用一个函数时，只传入了一个参数，对 this 并没有影响。12345678910111213141516let obj2 = &#123; a: 10, b: function(n) &#123; let f = (n) =&gt; n + this.a; return f(n); &#125;, c: function(n) &#123; let f = (n) =&gt; n + this.a; let m = &#123; a: 20 &#125;; return f.call(m,n); &#125;&#125;;console.log(obj2.b(1)); // 11console.log(obj2.c(1)); // 11 箭头函数没有原型属性12345678910var a = ()=&gt;&#123; return 1;&#125;function b()&#123; return 2;&#125;console.log(a.prototype); // undefinedconsole.log(b.prototype); // &#123;constructor: ƒ&#125; 箭头函数不能当做Generator函数,不能使用yield关键字总结 箭头函数的 this 永远指向其上下文的 this ，任何方法都改变不了其指向，如 call() , bind() , apply() 普通函数的this指向调用它的那个对象]]></content>
+      <categories>
+        <category>ES6,javascript</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[前端ES6新特性]]></title>
     <url>%2F2018%2F10%2F28%2Fes6%2F</url>
     <content type="text"><![CDATA[解构解构对象123456var obj = &#123; name: &apos;小黑&apos;, age: &apos;10&apos;&#125;var &#123;name , age&#125; = obj;console.log(name,age);//&apos;小黑&apos; 10 解构数组1234var arr = [1,2,3,4]; var [a,b,c,d] = arr; console.log(a,b,c,d);//a = 1, b = 2, c = 3, d = 4; 解构数组 结合 拓展运算符123var arr = [1,2,3,4]; var [a,...d] = arr;console.log(d);//2,3,4 定义变量 let定义一个作用域被限制在块级中的变量、语句或者表达式 const定义常量ps: 都没有变量提升，都具有 {} 作用域，const定义的值不能，重新赋值，并一定在定义的时候赋值 字符串的拓展模板字符串使用${}给变量站位123var str = 111; var str2 = 222;`$&#123;str&#125;-------$&#123;str2&#125;` //111-------222 startsWith、endsWith判断字符串开头或者结尾是否存在某个字符串 ，返回true 或者false padStart、padEnd 字符串拼接 padStart(length,str) length 是拼接后的字符串的总长度，str是要使用什么字符串拼接 （开头） EndStart(length,str) length 是拼接后的字符串的总长度，str是要使用什么字符串拼接 （末尾） rest参数和 拓展运算符123456789101112131415function show(...rest) &#123; //在函数定义使用的...obj叫rest参数 //使用...rest 那么rest 类型为数组 var result = 0; rest.forEach(item =&gt; &#123; result += item; &#125;); console.log(result);&#125;// 参数不确定// show(1,2,3,4);var arr = [1,2,3,4];show(...arr) //在函数调用时使用的...obj饺子拓展运算符]]></content>
